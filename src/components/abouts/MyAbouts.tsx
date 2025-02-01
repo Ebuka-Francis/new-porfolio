@@ -3,6 +3,9 @@ import React from 'react';
 export default function MyAbouts() {
   return (
     <div>
+      <h4 className="sticky top-0 bg-slate-900 text-slate-400 leading-normal font-semibold text-[20px] mb-7 block lg:hidden">
+        About
+      </h4>
       <p className="text-slate-400 leading-normal text-[16px] mb-4">
         I am a passionate frontend developer with a deep enthusiasm for crafting
         dynamic, user-friendly, and visually engaging web experiences. My

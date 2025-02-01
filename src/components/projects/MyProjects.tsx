@@ -5,10 +5,13 @@ import { ProjectDatas } from '@/datas/projectDatas';
 
 export default function MyProjects() {
   return (
-    <div className="flex flex-col gap-6 ">
+    <div className="flex  flex-col gap-6 ">
+      <h4 className=" sticky top-0 bg-slate-900 text-slate-400 leading-normal font-semibold text-[20px] block lg:hidden">
+        Projects
+      </h4>
       {ProjectDatas.map((project, index) => (
         <div
-          className="group flex gap-6 p-4  hover:bg-slate-800 hover:text-[#4EC2C4] cursor-pointer rounded-md "
+          className="group flex-col-reverse sm:flex-row flex gap-6 lg:first-line:p-4  hover:bg-slate-800 hover:text-[#4EC2C4] cursor-pointer rounded-md "
           key={index}
         >
           <img className="w-[30%]" src={project.imgUrl} alt={project.title} />
@@ -21,7 +24,7 @@ export default function MyProjects() {
               <span>{project.title}</span>
               <FaExternalLinkAlt className="text-white text-[15px] hover:text-[#4EC2C4]  " />
             </a>
-            <p className="text-slate-400 text-[10px] font-semibold leading-normal">
+            <p className="text-slate-400 text-[14px] lg:text-[10px] font-semibold leading-normal">
               {project.description}
             </p>
           </div>
