@@ -91,11 +91,11 @@ export default function MyExperienceProjects() {
               {item.about}
             </p>
             <div className="flex gap-3 flex-wrap">
-              <span className="p-2 text-[10px] rounded-[15px] bg-slate-700">
+              <span className="p-2 text-[10px] rounded-[15px] bg-blue-800">
                 {item.technologies.language}
               </span>
               <span
-                className={`p-2 text-[10px] rounded-[15px] bg-slate-700 ${
+                className={`p-2 text-[10px] rounded-[15px] bg-blue-800 ${
                   item.technologies.otherLanguages ? 'block' : 'hidden'
                 } `}
               >
@@ -104,14 +104,14 @@ export default function MyExperienceProjects() {
                   : null}
               </span>
               <span
-                className={`p-2 text-[10px] rounded-[15px] bg-slate-700 ${
+                className={`p-2 text-[10px] rounded-[15px] bg-blue-800 ${
                   item.technologies.frameWork ? 'block' : 'hidden'
                 } `}
               >
                 {item.technologies.frameWork}
               </span>
               <span
-                className={`p-2 text-[10px] rounded-[15px] bg-slate-700 ${
+                className={`p-2 text-[10px] rounded-[15px] bg-blue-800 ${
                   item.technologies.techie ? 'block' : 'hidden'
                 } `}
               >

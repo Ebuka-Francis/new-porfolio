@@ -21,3 +21,8 @@ body {
   margin: 0px;
   padding: 0px;
 }
+
+#nprogress .bar {
+  background: #4f46e5 !important; /* Change to your preferred color */
+  height: 4px !important;
+}
