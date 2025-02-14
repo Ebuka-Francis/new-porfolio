@@ -22,7 +22,7 @@ const MYJOB: MyJobs[] = [
     date: 2024,
     about:
       'Build and maintain critical components used to construct Snookerz, Snookerz dashboard frontend across the whole competitions and challenges. Work with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility.',
-    links: '',
+    links: 'https://admin.snookerz.com/dashboard',
     technologies: {
       language: 'JavaScript',
       otherLanguages: 'TypeScript',
@@ -36,7 +36,7 @@ const MYJOB: MyJobs[] = [
     date: 2024,
     about:
       'Build a basic websit well interactive for a transport company called coolride though it has not gone live now but it will soon be live the app also exists in playstore the website was simple and basic desgin by me when i was an intern',
-    links: '',
+    links: 'https://coolride.com',
     technologies: {
       language: 'Javascript',
       otherLanguages: '',
@@ -50,7 +50,7 @@ const MYJOB: MyJobs[] = [
     date: 2023,
     about:
       'Cloned a netflix website and other websites like apples, clownfunds,lundry man, calculator, interior etc it was a great experience for me doing what i love then and doing it to the best of my knowledge well.',
-    links: '',
+    links: 'https://ebuka-commerce-app.vercel.app/',
     technologies: {
       language: 'HTML',
       otherLanguages: 'CSS',
@@ -67,8 +67,10 @@ export default function MyExperienceProjects() {
         Experience
       </h4>
       {MYJOB.map((item, idx) => (
-        <div
+        <a
+          href={item.links}
           key={idx}
+          target="_blank"
           className=" flex-col sm:flex-row  flex gap-5 items-start"
         >
           <div className="flex items-center gap-2">
@@ -119,7 +121,7 @@ export default function MyExperienceProjects() {
               </span>
             </div>
           </div>
-        </div>
+        </a>
       ))}
     </section>
   );

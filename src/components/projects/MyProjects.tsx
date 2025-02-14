@@ -11,7 +11,7 @@ export default function MyProjects() {
       </h4>
       {ProjectDatas.map((project, index) => (
         <div
-          className="group flex-col-reverse sm:flex-row flex gap-6 lg:first-line:p-4  hover:bg-slate-800 hover:text-[#4EC2C4] cursor-pointer rounded-md "
+          className="group p-3 flex-col-reverse sm:flex-row flex gap-6 lg:first-line:p-4  hover:bg-slate-800 hover:text-[#4EC2C4] cursor-pointer rounded-md "
           key={index}
         >
           <img className="w-[30%]" src={project.imgUrl} alt={project.title} />
