@@ -4,7 +4,11 @@ import { BiRightArrowAlt } from 'react-icons/bi';
 
 export default function MyLinks() {
   return (
-    <div className="flex pl-5 lg:pr-0 max-w-[100%] lg:max-w-[35%] gap-1 items-center hover:border-b border-[#4EC2C4]">
+    <div
+      className="relative flex items-center text-lg font-semibold text-gray-600 transition-all duration-300 
+hover:text-blue-600 before:absolute before:-bottom-1 before:left-0 before:w-0 
+before:h-1 before:bg-blue-600 before:transition-all before:duration-300 hover:before:w-[50%]"
+    >
       <Link
         className="font-semibold flex items-center gap-3 mb-2"
         href="/archiveProjects"

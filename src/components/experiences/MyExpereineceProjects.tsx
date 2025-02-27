@@ -71,7 +71,7 @@ export default function MyExperienceProjects() {
           href={item.links}
           key={idx}
           target="_blank"
-          className=" flex-col sm:flex-row  flex gap-5 items-start"
+          className=" flex-col sm:flex-row  flex gap-5 items-start transition-transform duration-300 hover:scale-110 hover:rotate-3"
         >
           <div className="flex items-center gap-2">
             <h5 className="text-slate-400 font-semibold leading-normal max-w-xs">

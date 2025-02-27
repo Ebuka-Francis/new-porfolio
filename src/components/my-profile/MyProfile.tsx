@@ -11,27 +11,30 @@ export default function MyProfile() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      if (!isDeleting) {
-        // Typing effect
-        if (index < text.length) {
-          setDisplayedText((prev) => prev + text[index]);
-          setIndex((prev) => prev + 1);
+      setDisplayedText((prev) => {
+        if (!isDeleting) {
+          // Typing effect
+          if (index < text.length) {
+            setIndex((prev) => prev + 1);
+            return text.slice(0, index + 1);
+          } else {
+            setIsDeleting(true); // Start deleting after typing is complete
+          }
         } else {
-          setIsDeleting(true); // Start deleting after typing is complete
+          // Deleting effect
+          if (index > 0) {
+            setIndex((prev) => prev - 1);
+            return text.slice(0, index - 1);
+          } else {
+            setIsDeleting(false);
+          }
         }
-      } else {
-        // Deleting effect
-        if (index > 0) {
-          setDisplayedText((prev) => prev.slice(0, -1));
-          setIndex((prev) => prev - 1);
-        } else {
-          setIsDeleting(false); // Restart typing when all letters are deleted
-        }
-      }
-    }, 50); // Adjust speed here
+        return prev;
+      });
+    }, 100);
 
-    return () => clearInterval(interval); // Cleanup
-  }, [index, isDeleting, text]);
+    return () => clearInterval(interval);
+  }, [index, isDeleting]);
 
   return (
     <div className=" mt-[30px] lg:mt-0 static lg:sticky lg:w-[48%] lg:top-0 lg:py-24 h-auto lg:h-[100vh]  flex flex-col justify-between">
