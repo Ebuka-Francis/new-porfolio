@@ -1,6 +1,8 @@
 import React from 'react';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 
+import { FaRegArrowAltCircleDown } from 'react-icons/fa';
+
 interface MyJobs {
   title: string;
   year: string | number;
@@ -123,6 +125,9 @@ export default function MyExperienceProjects() {
           </div>
         </a>
       ))}
+      <div className="size-10 animate-bounce fixed bottom-2 right-10">
+        <FaRegArrowAltCircleDown className="text-[25px] text-blue-800 " />
+      </div>
     </section>
   );
 }

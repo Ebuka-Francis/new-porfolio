@@ -102,24 +102,24 @@ const NavItem: React.FC<NavItemProps> = ({
 
   // 🔹 Correcting the `.to()` error with `useTransform`
   const widthTransform = useTransform(scrollYProgress, [0, 1], ['0%', '100%']);
+  const lastItemWidth = useTransform(scrollYProgress, [0, 1], ['100%', '20%']);
 
   return (
     <li ref={ref}>
       <a className="flex items-center py-3" href={`#${sectionId}`}>
         <motion.span
           animate={controls}
-          initial={{ width: '0%' }}
+          initial={{ width: '20%' }}
           className="nav-indicator mr-4 h-px bg-slate-600 transition-all"
           style={{
             width:
               index === 0
-                ? widthTransform // First item scales with scroll
+                ? widthTransform
                 : index === navItems.length - 1
-                ? // eslint-disable-next-line react-hooks/rules-of-hooks
-                  useTransform(scrollYProgress, [0, 1], ['100%', '20%']) // Last item scales in reverse
+                ? lastItemWidth
                 : inView
                 ? '100%'
-                : '20%', // Middle items expand when in view
+                : '20%',
           }}
         />
         <span className="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200">
