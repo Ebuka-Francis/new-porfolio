@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
+import Head from 'next/head';
 
 NProgress.configure({ showSpinner: false });
 
@@ -12,13 +13,13 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 
 const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
+   variable: '--font-geist-sans',
+   subsets: ['latin'],
 });
 
 const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
+   variable: '--font-geist-mono',
+   subsets: ['latin'],
 });
 
 // export const metadata: Metadata = {
@@ -27,36 +28,42 @@ const geistMono = Geist_Mono({
 // };
 
 export default function RootLayout({
-  children,
+   children,
 }: Readonly<{
-  children: React.ReactNode;
+   children: React.ReactNode;
 }>) {
-  const router = useRouter();
-  const pathname = usePathname();
+   const router = useRouter();
+   const pathname = usePathname();
 
-  useEffect(() => {
-    NProgress.start();
+   useEffect(() => {
+      NProgress.start();
 
-    const timer = setTimeout(() => {
-      NProgress.done();
-    }, 500); // Simulate a short delay
+      const timer = setTimeout(() => {
+         NProgress.done();
+      }, 500); // Simulate a short delay
 
-    // ✅ Correct way to manually prefetch a route
-    router.prefetch('/archiveProjects');
+      // ✅ Correct way to manually prefetch a route
+      router.prefetch('/archiveProjects');
 
-    return () => {
-      clearTimeout(timer);
-      NProgress.done();
-    };
-  }, [pathname, router]);
+      return () => {
+         clearTimeout(timer);
+         NProgress.done();
+      };
+   }, [pathname, router]);
 
-  return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
-  );
+   return (
+      <html lang="en">
+         <Head>
+            <meta
+               name="google-site-verification"
+               content="1FQbpEsqb6qeBvjQAOe6e4CH_Ga9bpLk0rQI4uXl2g4"
+            />
+         </Head>
+         <body
+            className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+         >
+            {children}
+         </body>
+      </html>
+   );
 }

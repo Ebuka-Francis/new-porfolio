@@ -1,20 +1,29 @@
-'use client';
 import MyProfile from '@/components/my-profile/MyProfile';
 import MyArticles from '@/components/arcticles/MyArticles';
-import { motion, AnimatePresence } from 'framer-motion';
+import Head from 'next/head';
+import { Metadata } from 'next';
+import ClientWrapper from '@/components/clientWrapper/ClientWrapper';
+// Create this component
+
+export const metadata: Metadata = {
+   verification: {
+      google: '1FQbpEsqb6qeBvjQAOe6e4CH_Ga9bpLk0rQI4uXl2g4',
+   },
+};
 
 export default function Home() {
-  return (
-    <AnimatePresence>
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, ease: 'easeOut' }}
-        className=" p-7 lg:p-5 justify-between flex-col lg:flex-row flex mx-auto max-w-7xl bg-slate-900 h-full"
-      >
-        <MyProfile />
-        <MyArticles />
-      </motion.div>
-    </AnimatePresence>
-  );
+   return (
+      <>
+         <Head>
+            <meta
+               name="google-site-verification"
+               content="1FQbpEsqb6qeBvjQAOe6e4CH_Ga9bpLk0rQI4uXl2g4"
+            />
+         </Head>
+         <ClientWrapper>
+            <MyProfile />
+            <MyArticles />
+         </ClientWrapper>
+      </>
+   );
 }
