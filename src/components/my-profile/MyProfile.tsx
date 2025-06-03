@@ -69,7 +69,7 @@ before:h-1 before:bg-blue-600 before:transition-all before:duration-300 hover:be
             </div>
             <MySections />
          </div>
-         <MySocials />s
+         <MySocials />
       </div>
    );
 }
