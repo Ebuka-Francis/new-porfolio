@@ -5,6 +5,14 @@ export interface Projects {
    link: string;
 }
 
+export interface AllProjectProps {
+   title: string;
+   description: string;
+   link: string;
+   technology: string;
+   year: string;
+}
+
 export interface ChartData {
    categories: string[];
    sales: number[];
