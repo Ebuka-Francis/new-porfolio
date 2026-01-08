@@ -5,7 +5,7 @@ import { ProjectDatas } from '@/datas/projectDatas';
 
 export default function MyProjects() {
   return (
-    <div className="flex  flex-col gap-6 ">
+    <div id="projects" className="flex  flex-col gap-6 ">
       <h4 className=" sticky top-0 bg-slate-900 text-slate-400 leading-normal font-semibold text-[20px] block lg:hidden">
         Projects
       </h4>

@@ -9,15 +9,20 @@ export default function MySocials() {
   return (
     <ul className="ml-1 gap-5 mt-8 flex items-center">
       <li className="shrink-0 text-xs">
-        <a href="https://github.com/Ebuka-Francis" target="_blank">
+        <a
+          href="https://github.com/Ebuka-Francis"
+          target="_blank"
+          aria-label="GitHub Profile"
+        >
           {' '}
-          <FaGithub className="text-[25px] lg:text-[30px]text-[#94A3B8] " />{' '}
+          <FaGithub className="text-[25px] lg:text-[30px] text-[#94A3B8] " />{' '}
         </a>
       </li>
       <li className="shrink-0 text-xs">
         <a
           href="https://www.linkedin.com/in/ebuka-francis-3a3690272/"
           target="_blank"
+          aria-label="LinkedIn Profile"
         >
           {' '}
           <FaLinkedin className="text-[25px] lg:text-[30px] text-[#94A3B8] " />{' '}
@@ -36,7 +41,11 @@ export default function MySocials() {
         </a>
       </li> */}
       <li className="shrink-0 text-xs">
-        <a href="https://wa.me/+2348133842387" target="_blank">
+        <a
+          href="https://wa.me/+2348133842387"
+          target="_blank"
+          aria-label="WhatsApp"
+        >
           {' '}
           <FaWhatsappSquare className=" text-[25px] lg:text-[30px] text-[#94A3B8] " />{' '}
         </a>

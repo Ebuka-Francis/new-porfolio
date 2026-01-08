@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function MyAbouts() {
   return (
-    <div>
+    <div id="about">
       <h4 className="sticky top-0 bg-slate-900 text-slate-400 leading-normal font-semibold text-[20px] mb-7 block lg:hidden">
         About
       </h4>
