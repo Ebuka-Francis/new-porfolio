@@ -25,17 +25,6 @@ const Chart = dynamic(() => import('react-apexcharts'), {
    ssr: false,
 }) as React.ComponentType<ChartProps>;
 
-// Animation Variants
-const containerVariants = {
-   hidden: { opacity: 0 },
-   visible: {
-      opacity: 1,
-      transition: {
-         straggerChildren: 0.1,
-         delayChildren: 0.2, // Check if this should be staggerChildren
-      },
-   },
-};
 
 const itemVariants = {
    hidden: { y: 20, opacity: 0 },
@@ -53,6 +42,7 @@ const ChartDashboard = () => {
 
    // --- Chart Configurations (Moved logic here to keep component readable, or could also move to data file if static) ---
 
+   
    // Common Theme Settings
    const commonOptions: Partial<ApexOptions> = {
       chart: { background: 'transparent', toolbar: { show: true } },

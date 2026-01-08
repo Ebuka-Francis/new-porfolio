@@ -1,4 +1,3 @@
-import { ApexOptions } from 'apexcharts';
 
 export type ChartType = 'line' | 'bar' | 'area' | 'pie' | 'donut' | 'mixed';
 
