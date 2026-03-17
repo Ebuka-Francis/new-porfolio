@@ -6,7 +6,7 @@ import { BiRightArrowAlt } from 'react-icons/bi';
 import Link from 'next/link';
 
 export default function MyProfile() {
-   const text = 'FRONT END DEVELOPER';
+   const text = 'WEB DEVELOPER';
    const [displayedText, setDisplayedText] = useState('');
    const [index, setIndex] = useState(0);
    const [isDeleting, setIsDeleting] = useState(false);
@@ -50,7 +50,8 @@ export default function MyProfile() {
                   <span className="animate-bounce">|</span>
                </h2>
                <p className=" text-slate-400 font-semibold leading-normal max-w-xs mt-4">
-                  I Build accessible, pixel-perfect digital experience for web{' '}
+                  I build fast, accessible, and pixel-perfect web experiences
+                  that transform ideas into powerful digital products.
                </p>
                <div
                   className="relative flex items-center text-[14px] font-semibold text-gray-600 transition-all duration-300 
