@@ -5,12 +5,12 @@ import MyLinks from '../utilities/MyLinks';
 import MyExperience from '../experiences/MyExperience';
 
 export default function MyArticles() {
-  return (
-    <div className=" flex flex-col gap-16 lg:py-24 pt-24 max-w-[100%] lg:max-w-[50%]">
-      <MyAbouts />
-      <MyProjects />
-      <MyLinks />
-      <MyExperience />
-    </div>
-  );
+   return (
+      <div className=" flex flex-col gap-16 lg:py-24 pt-24 max-w-[100%] lg:max-w-[50%]">
+         <MyAbouts />
+         <MyExperience />
+         <MyLinks />
+         <MyProjects />
+      </div>
+   );
 }

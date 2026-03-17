@@ -2,9 +2,9 @@ import React from 'react';
 import MyExpereineceProjects from './MyExpereineceProjects';
 
 export default function MyExperience() {
-  return (
-    <div id="experience">
-      <MyExpereineceProjects />
-    </div>
-  );
+   return (
+      <div id="experience">
+         <MyExpereineceProjects />
+      </div>
+   );
 }

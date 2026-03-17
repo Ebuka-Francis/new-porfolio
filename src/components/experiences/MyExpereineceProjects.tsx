@@ -88,7 +88,7 @@ const MYJOB: MyJobs[] = [
 export default function MyExperienceProjects() {
    return (
       <section className="flex flex-col gap-[2rem] p-2 ">
-         <h4 className=" sticky top-0 bg-slate-900 text-slate-400 leading-normal font-semibold text-[20px] block lg:hidden">
+         <h4 className=" sticky top-0 bg-slate-900 text-slate-400 leading-normal font-semibold text-[20px] ">
             Experience
          </h4>
          {MYJOB.map((item, idx) => (
