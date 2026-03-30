@@ -1,35 +1,37 @@
 import React from 'react';
 
 export default function MyAbouts() {
-  return (
-    <div id="about">
-      <h4 className="sticky top-0 bg-slate-900 text-slate-400 leading-normal font-semibold text-[20px] mb-7 block lg:hidden">
-        About
-      </h4>
-      <p className="text-slate-400 leading-normal text-[16px] mb-4">
-        I am a passionate frontend developer with a deep enthusiasm for crafting
-        dynamic, user-friendly, and visually engaging web experiences. My
-        expertise lies in leveraging modern web technologies like React,
-        Next.js, and TypeScript to build scalable and maintainable applications.
-        I also have a strong background in state management solutions, such as
-        Zustand, and enjoy integrating tools like Firebase for seamless
-        authentication and real-time data handling.
-      </p>
-      <p className="text-slate-400 leading-normal mb-4 text-[16px] ">
-        With a commitment to writing clean, efficient, and maintainable code, I
-        approach every project with a focus on delivering responsive and
-        intuitive designs that enhance user experience. Whether it’s developing
-        complex e-commerce platforms, creating feature-rich applications, or
-        optimizing performance for faster load times, I thrive on solving
-        challenges and bringing innovative ideas to life.
-      </p>
-      <p className="text-slate-400  leading-normal mb-4 text-[16px]">
-        Beyond technical skills, I believe collaboration and continuous learning
-        are essential in web development. I’m always exploring new tools,
-        frameworks, and techniques to stay ahead in this ever-evolving field. My
-        goal is to contribute to projects that make an impact while growing
-        alongside a team of creative and like-minded professionals.
-      </p>
-    </div>
-  );
+   return (
+      <div id="about">
+         <h4 className="sticky top-0 bg-slate-900 text-slate-400 leading-normal font-semibold text-[20px] mb-7 block lg:hidden">
+            About
+         </h4>
+         <p className="text-slate-400 leading-normal text-[16px] mb-4">
+            I am a results-driven Full Stack Developer with experience building
+            scalable, high-performance web applications using modern
+            technologies such as React, Next.js, TypeScript, Node.js, Firebase,
+            and MongoDB. I specialize in developing end-to-end solutions, from
+            responsive frontend interfaces to secure backend APIs and database
+            architecture.
+         </p>
+
+         <p className="text-slate-400 leading-normal mb-4 text-[16px]">
+            My core strengths include frontend development, RESTful API
+            integration, state management (Zustand), authentication systems, and
+            real-time data handling. I have built and optimized applications
+            such as e-commerce platforms, dashboards, and interactive web apps,
+            focusing on performance optimization, clean architecture, and
+            maintainable code.
+         </p>
+
+         <p className="text-slate-400 leading-normal mb-4 text-[16px]">
+            I am passionate about writing efficient, reusable code and following
+            best practices in software development. I thrive in collaborative
+            environments, continuously learning new tools and frameworks to stay
+            current in the evolving tech landscape. I am actively seeking
+            opportunities to contribute to impactful projects while growing as a
+            Full Stack Developer.
+         </p>
+      </div>
+   );
 }
