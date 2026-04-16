@@ -3,18 +3,27 @@ import { Projects, AllProjectProps } from '@/types/types';
 export const ProjectDatas: Projects[] = [
    {
       imgUrl: '/project1image.png',
-      title: 'Build a Basic Commerce Web-App',
+      title: 'Build a Commerce Web-App',
       description:
          'A responsive e-commerce app with a dynamic product catalog, real-time cart updates, Firebase authentication, and Firestore integration. Built with React and TypeScript for performance and scalability. ',
       link: 'https://product-list-cart-project.vercel.app/',
    },
    {
-      imgUrl: '/projectimage1.png',
-      title: 'Build a basic Todo-App',
+      imgUrl: '/translation-projectImage.png',
+      title: 'Built a translation web-app',
       description:
-         'A simple and intuitive to-do app for managing tasks efficiently. Features include task creation, editing, deletion, and real-time updates. Built with React for a seamless user experience.',
-      link: 'https://ebuka-todo-app.netlify.app/',
+         'A responsive translation and study app with a dynamic Login process for both teacher and students , Class Video/Lecture upload. Built with Next.js and TypeScript for performance and scalability. ',
+      link: 'https://translation-app-three-delta.vercel.app/',
+      // technology: 'Next.js, Firebase & Tailwind CSS',
+      // year: '2025',
    },
+   // {
+   //    imgUrl: '/projectimage1.png',
+   //    title: 'Build a Todo-App',
+   //    description:
+   //       'A simple and intuitive to-do app for managing tasks efficiently. Features include task creation, editing, deletion, and real-time updates. Built with React for a seamless user experience.',
+   //    link: 'https://ebuka-todo-app.netlify.app/',
+   // },
    {
       imgUrl: '/projectimage3.png',
       title: 'Built a Crowdfund Page',
@@ -41,7 +50,7 @@ export const AllProjectDatas: AllProjectProps[] = [
       year: '2025',
    },
    {
-      title: 'Build a Basic Commerce Web-App',
+      title: 'Build a Commerce Web-App',
       description:
          'A responsive e-commerce app with a dynamic product catalog, real-time cart updates, Firebase authentication, and Firestore integration. Built with React and TypeScript for performance and scalability. ',
       link: 'https://product-list-cart-project.vercel.app/',
