@@ -18,6 +18,19 @@ interface MyJobs {
 }
 
 const MYJOB: MyJobs[] = [
+    {
+      title: 'Fullstack Developer',
+      year: 2026,
+      date: 2025,
+      about: 'Prince Paul Gadgets is an e-commerce platform for purchasing authentic smartphones, laptops, gaming devices, accessories and other tech gadgets, with delivery available nationwide in Nigeria.',
+      links: 'https://www.princepaulgadgets.com/',
+      technologies: {
+         language: 'JavaScript',
+         otherLanguages: 'TypeScript',
+         frameWork: 'React',
+         techie: 'Firebase, Rest APIs',
+      },
+   },
    {
       title: 'Senior Frontend Developer',
       year: 2026,
