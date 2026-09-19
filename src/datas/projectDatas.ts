@@ -2,7 +2,7 @@ import { Projects, AllProjectProps } from '@/types/types';
 
 export const ProjectDatas: Projects[] = [
    {
-      imgUrl: '/project1image.png',
+      imgUrl: '/productRevamp.png',
       title: 'Build a Commerce Web-App',
       description:
          'A responsive e-commerce app with a dynamic product catalog, real-time cart updates, Firebase authentication, and Firestore integration. Built with React and TypeScript for performance and scalability. ',
