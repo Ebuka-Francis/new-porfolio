@@ -34,7 +34,7 @@ const MYJOB: MyJobs[] = [
    {
       title: 'Senior Frontend Developer',
       year: 2026,
-      date: 2025,
+      date: 2024,
       about: 'Snookerz is more than a website—it’s infrastructure for cue sports. The platform organizes players, tournaments, and rankings into one ecosystem, giving grassroots talent the visibility and structure needed to grow and compete at higher levels.',
       links: 'https://snookerz.com/',
       technologies: {
