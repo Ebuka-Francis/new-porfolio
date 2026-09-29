@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation';
 import dynamic from 'next/dynamic';
 import { ApexOptions } from 'apexcharts';
 import { BiLeftArrowAlt } from 'react-icons/bi';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import {
    monthlyData,
    chartButtons,
@@ -26,7 +26,7 @@ const Chart = dynamic(() => import('react-apexcharts'), {
 }) as React.ComponentType<ChartProps>;
 
 
-const itemVariants = {
+const itemVariants: Variants = {
    hidden: { y: 20, opacity: 0 },
    visible: {
       y: 0,
