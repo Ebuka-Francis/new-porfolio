@@ -2,8 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import MySections from '../sections/MySections';
 import MySocials from '../socials/MySocials';
-import { BiRightArrowAlt } from 'react-icons/bi';
-import Link from 'next/link';
+// import { BiRightArrowAlt } from 'react-icons/bi';
+// import Link from 'next/link';
 
 export default function MyProfile() {
    const text = 'WEB DEVELOPER';
@@ -53,7 +53,7 @@ export default function MyProfile() {
                   I build fast, accessible, and pixel-perfect web experiences
                   that transform ideas into powerful digital products.
                </p>
-               <div
+               {/* <div
                   className="relative flex items-center text-[14px] font-semibold text-gray-600 transition-all duration-300 
 hover:text-blue-600 before:absolute before:-bottom-1 before:left-0 before:w-0 
 before:h-1 before:bg-blue-600 before:transition-all before:duration-300 hover:before:w-[50%] mt-3"
@@ -66,7 +66,7 @@ before:h-1 before:bg-blue-600 before:transition-all before:duration-300 hover:be
                   </Link>
 
                   <BiRightArrowAlt className="text-[14px] font-semibold flex items-center gap-3 mb-2 " />
-               </div>
+               </div> */}
             </div>
             <MySections />
          </div>

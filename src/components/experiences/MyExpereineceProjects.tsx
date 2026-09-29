@@ -100,69 +100,71 @@ const MYJOB: MyJobs[] = [
 
 export default function MyExperienceProjects() {
    return (
-      <section className="flex flex-col gap-[2rem] p-2 ">
-         <h4 className=" sticky top-0 bg-slate-900 text-slate-400 leading-normal font-semibold text-[20px] ">
+      <section className="group/list flex flex-col gap-4 p-2">
+         <h4 className="sticky top-0 bg-slate-900 text-slate-400 leading-normal font-semibold text-[20px]">
             Experience
          </h4>
+
          {MYJOB.map((item, idx) => (
             <a
                href={item.links}
                key={idx}
                target="_blank"
-               className=" flex-col sm:flex-row  flex gap-5 items-start transition-transform duration-300 hover:scale-110 hover:rotate-3"
+               rel="noopener noreferrer"
+               className="group/item relative flex flex-col sm:flex-row gap-5 items-start rounded-xl p-4
+                  transition-all duration-300 ease-out
+                  hover:-translate-y-1 hover:bg-slate-800/60 hover:shadow-xl hover:shadow-black/30
+                  lg:group-hover/list:opacity-50 lg:hover:!opacity-100
+                  motion-reduce:transition-none motion-reduce:hover:translate-y-0"
             >
+               {/* Accent bar that grows in on hover */}
+               <span className="absolute left-0 top-4 bottom-4 w-[3px] rounded-full bg-[#4EC2C4] origin-center scale-y-0 transition-transform duration-300 group-hover/item:scale-y-100" />
+
                <div className="flex items-center gap-2">
-                  <h5 className="text-slate-400 font-semibold leading-normal max-w-xs">
+                  <h5 className="text-slate-400 font-semibold leading-normal max-w-xs transition-colors duration-300 group-hover/item:text-slate-200">
                      {item.date}
                   </h5>
-                  <span className="nav-indicator h-px w-9 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
-                  <h5 className="text-slate-400 font-semibold leading-normal max-w-xs">
+                  <span className="h-px w-9 bg-slate-600 transition-all duration-300 group-hover/item:w-16 group-hover/item:bg-[#4EC2C4]" />
+                  <h5 className="text-slate-400 font-semibold leading-normal max-w-xs transition-colors duration-300 group-hover/item:text-slate-200">
                      {item.year}
                   </h5>
                </div>
+
                <div className="flex flex-col gap-[10px]">
                   <span className="flex items-center gap-3">
-                     <h3 className="text-lg font-semibold tracking-tight text-slate-200 sm:text-xl">
+                     <h3 className="text-lg font-semibold tracking-tight text-slate-200 sm:text-xl transition-colors duration-300 group-hover/item:text-[#4EC2C4]">
                         {item.title}
                      </h3>
-                     <FaExternalLinkAlt className="text-white text-[15px] hover:text-[#4EC2C4]" />
+                     <FaExternalLinkAlt className="text-white text-[15px] transition-all duration-300 group-hover/item:translate-x-1 group-hover/item:-translate-y-1 group-hover/item:text-[#4EC2C4]" />
                   </span>
+
                   <p className="text-slate-400 text-[16px] font-medium leading-normal">
                      {item.about}
                   </p>
+
                   <div className="flex gap-3 flex-wrap">
-                     <span className="p-2 text-[10px] rounded-[15px] bg-blue-800">
-                        {item.technologies.language}
-                     </span>
-                     <span
-                        className={`p-2 text-[10px] rounded-[15px] bg-blue-800 ${
-                           item.technologies.otherLanguages ? 'block' : 'hidden'
-                        } `}
-                     >
-                        {item.technologies.otherLanguages
-                           ? item.technologies.otherLanguages
-                           : null}
-                     </span>
-                     <span
-                        className={`p-2 text-[10px] rounded-[15px] bg-blue-800 ${
-                           item.technologies.frameWork ? 'block' : 'hidden'
-                        } `}
-                     >
-                        {item.technologies.frameWork}
-                     </span>
-                     <span
-                        className={`p-2 text-[10px] rounded-[15px] bg-blue-800 ${
-                           item.technologies.techie ? 'block' : 'hidden'
-                        } `}
-                     >
-                        {item.technologies.techie}
-                     </span>
+                     {[
+                        item.technologies.language,
+                        item.technologies.otherLanguages,
+                        item.technologies.frameWork,
+                        item.technologies.techie,
+                     ]
+                        .filter(Boolean)
+                        .map((tech) => (
+                           <span
+                              key={tech}
+                              className="p-2 text-[10px] rounded-[15px] bg-blue-800 transition-all duration-300 group-hover/item:bg-[#4EC2C4]/20 group-hover/item:text-[#4EC2C4] group-hover/item:ring-1 group-hover/item:ring-[#4EC2C4]/40"
+                           >
+                              {tech}
+                           </span>
+                        ))}
                   </div>
                </div>
             </a>
          ))}
+
          <div className="size-10 animate-bounce fixed bottom-2 right-10">
-            <FaRegArrowAltCircleDown className="text-[25px] text-blue-800 " />
+            <FaRegArrowAltCircleDown className="text-[25px] text-blue-800" />
          </div>
       </section>
    );

@@ -16,7 +16,11 @@ export default function MyProjects() {
 hover:shadow-2xl hover:-translate-y-2  "
           key={index}
         >
-          <img className="w-[30%]" src={project.imgUrl} alt={project.title} />
+         <img
+  className="w-full sm:w-[30%] rounded-md object-cover"
+  src={project.imgUrl}
+  alt={project.title}
+/>
           <div>
             <a
               className="font-semibold flex hover:text-[#4EC2C4] items-center gap-3 mb-2 "
